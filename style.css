@@ -1,0 +1,97 @@
+/* تنسيق الجسم */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* العنوان */
+  h1 {
+    margin-top: 50px;
+    color: #333;
+  }
+  
+  /* تصميم الظرف */
+  #envelope {
+    width: 250px;
+    height: 250px;
+    background-image: url('envelope.jpg'); /* قم بوضع صورة الظرف هنا */
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out; /* تأثير التحريك */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* إضافة ظل */
+  }
+  
+  /* تأثير عند الضغط على الظرف */
+  #envelope:active {
+    transform: scale(0.95);
+  }
+  
+  /* نافذة منبثقة */
+  .popup {
+    display: none; /* مخفية بشكل افتراضي */
+    position: fixed;
+    z-index: 1; /* التأكد من أن النافذة تظهر فوق كل العناصر الأخرى */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* خلفية مظلمة للنافذة المنبثقة */
+    animation: fadeIn 0.5s ease; /* تأثير دخول النافذة */
+  }
+  
+  /* محتوى النافذة المنبثقة */
+  .popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+  }
+  
+  .popup-content p {
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+  }
+  
+  /* زر إغلاق النافذة المنبثقة */
+  .close {
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* تأثير ظهور النافذة المنبثقة */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
